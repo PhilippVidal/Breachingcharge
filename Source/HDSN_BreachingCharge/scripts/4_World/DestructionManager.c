@@ -486,8 +486,8 @@ class HDSN_DestructionManager
 		if(combinationLock)
 		{
 			//Without unlocking the lock first the object becomes broken and can not be locked again
-			combinationLock.UnlockServer(placingPlayer, EntityAI.Cast(target));
-			combinationLock.DestroyLock();
+			combinationLock.UnlockOnServer(placingPlayer, EntityAI.Cast(target));
+			g_Game.ObjectDelete(combinationLock);
 		}
 
 		return true;
