@@ -143,8 +143,8 @@ class HDSN_GunpowderRecipe extends RecipeBase
 		//result
 		AddResult("HDSN_Gunpowder");	// recipe result
 
-		m_ResultSetFullQuantity[0] = -1;	// -1 = do nothing
-		m_ResultSetQuantity[0] = 1;			// result quantity
+		m_ResultSetFullQuantity[0] = false;	// keep the default result quantity
+		m_ResultSetQuantity[0] = -1;			// do not override the initial quantity
 		m_ResultSetHealth[0] = -1;			// -1 = do nothing
 		m_ResultInheritsHealth[0] = -1;		// -1 = do nothing
 		m_ResultInheritsColor[0] = -1;		// -1 = do nothing
