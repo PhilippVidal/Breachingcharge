@@ -32,12 +32,12 @@ class CfgMods
 			class worldScriptModule
 			{
 				value = "";
-				files[] = {"HDSN_BreachingCharge\scripts\Common","HDSN_BreachingCharge\scripts\4_World"};
+				files[] = {"HDSN_BreachingCharge/scripts/Common","HDSN_BreachingCharge/scripts/4_World"};
 			};
 			class missionScriptModule
 			{
 				value = "";
-				files[] = {"HDSN_BreachingCharge\scripts\Common","HDSN_BreachingCharge\scripts\5_Mission"};
+				files[] = {"HDSN_BreachingCharge/scripts/Common","HDSN_BreachingCharge/scripts/5_Mission"};
 			};
 		};
 	};
