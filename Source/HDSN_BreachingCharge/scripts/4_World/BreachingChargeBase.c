@@ -513,16 +513,10 @@ class HDSN_BreachingChargeBase : ItemBase
 		}
 	}
 
-	//Overriding this function to prevent the charge from weighing a lot more than it should because of the quantitiy in the config
-	override float GetSingleInventoryItemWeight()
+	// The charge quantity represents its countdown, not additional item mass.
+	override protected float GetWeightSpecialized(bool forceRecalc = false)
 	{
-		return m_ConfigWeight;
-	}
-
-	//Overriding this function to prevent the charge from weighing a lot more than it should because of the quantitiy in the config
-	override void UpdateWeight(WeightUpdateType updateType = WeightUpdateType.FULL, float weightAdjustment = 0)
-	{
-		m_Weight = m_ConfigWeight;
+		return EntityAIType.Cast(GetEntityType()).m_ConfigWeight + GetInventoryAndCargoWeight(forceRecalc);
 	}
 
 	Particle GetChargeExplosionParticle()
